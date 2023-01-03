@@ -5,17 +5,21 @@ function Login(){
         <div className="login-form-container">
             
             <form>
+            <div className="make-account-txt">
+                <p>Don't have an account?</p>
+                <a href="/signup" className="signup-from-login">Signup</a>
+            </div>
             <h2 className="greeting">Welcome</h2>
-            <p className="login-text">Login to continue</p>
+            <div className="login-text">Login to continue</div>
+                <label><b>Username</b> </label>
                 <div className="input-container">
-                    <label><b>Your username</b> </label>
+                    <input type="text" placeholder="Your username" />
                     <i class="fa fa-user icon"></i>
-                    <input type="text" placeholder="Username" />
                 </div>
+                <label><b>Password</b> </label>
                 <div className="input-container">
-                    <label><b>Your password</b> </label>
+                    <input type="password" placeholder="Your password" />
                     <i class="fa fa-lock icon"></i>
-                    <input type="password" placeholder="Password" />
                 </div>
                 <div className="btn-container">
                     <button id="login-btn" type="submit">Login</button>

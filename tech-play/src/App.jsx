@@ -1,11 +1,11 @@
 import React from "react";
+import { Route, Routes} from 'react-router-dom';
 import ItemCard from "./itemsList";
 import Navbar from "./navbar";
-import { Route, Routes} from 'react-router-dom';
 import Login from "./login";
 import Home from "./home";
-// import Signup from "./signup";
-
+import Signup from "./signup";
+import Product from "./productDisplay";
 
 function App() {
   const [apiRes, setApiRes] = React.useState("ok");
@@ -20,15 +20,20 @@ function App() {
   return (
     <div className="App">
     <Navbar />
-    <div>
+    <section className="main-page">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<div>ABOUT</div>} />
         <Route path="/login" element={<Login />} />
         <Route path="/categories" element={<ItemCard />} />
+        <Route path="/signup" element={<Signup />}/>
+        <Route path="/product" element={<Product />}/>
       </Routes>
-    </div>
+    </section>
 
+    <section className="filters">
+      <input type='text'/>
+    </section>
       <p>this is a message from the backend </p>
       <h4>{apiRes}</h4>
     </div>

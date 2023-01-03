@@ -3,9 +3,12 @@ import data from "./data";
 
 function ItemCard(props){
     const products = data.map(product => (
+        
         <li key={product.id} className="card">
             <h3>{product.name}</h3>
-            <img src={product.img} alt="product img"/>
+            <a href="/product">
+                <img src={product.img} alt="product img"/>
+            </a>
             <div>{product.description.substring(0,100)}...</div>
             <div className="price-add-box">
                 <div id="product-price">{product.price} ₪</div>
